@@ -12,11 +12,11 @@ Here is one picture of the video of pulse wave analysis to the program. The prog
 
 Let's move on the step of Pulse Init calculations. The application which has been made allows us to see the pulse init graphic, which in order words allow us to easily see every pulses and then allow us to calculate them. Here's an example: 
 
-![image](https://camo.githubusercontent.com/ecd06d76bf06cf14ca699d3bbe1c536cad957330e0365667e6593fa304efc272/68747470733a2f2f6c68332e676f6f676c6575736572636f6e74656e742e636f6d2f6b6565702d6262736b2f41503642765451396259694475444231787673454974304f31736f7544726a576b68653856772d546f684a356865707761497231555036684a4b796179486c706a554b626e6a6f6a3941786f7654344a656d4e5941434d362d686d5f565538565955746567635f776c38664c4d436f30636d75343d73353630)
+![image](https://cdn.discordapp.com/attachments/609269720805408788/1012051767850172436/Screenshot_7.png)
 
 This is a sum of signal pulse of the video implemented to the pulse wave program. The first time the pulse increases is a start of a first cycle. Let's see a detailed explanation of the pulse wave system:
 
-![Image](https://camo.githubusercontent.com/7dafdb5d245c6df9c26e085f7799fe129e51a3354b0c46e311a3222c42d584d3/68747470733a2f2f6c68332e676f6f676c6575736572636f6e74656e742e636f6d2f6b6565702d6262736b2f4150364276545336356171337365765f717841484d767850624e787a355f555864536f6d645449333369367045314366624b4f465f54612d494d63427a30504d6a74414c5f765a435933304f4c5572456d76586d596d534d4b4a6233596e4579736f41674d6642644145644773516865305232393d7331363030)
+![Image](https://cdn.discordapp.com/attachments/609269720805408788/1012051901463932958/Screenshot_8.png)
 
 A systole is when the signal increases, which can be seen each time the pulse goes higher. Meanwhile a diastole is when the signal decreases, which can be seen each time the pulse goes lower.
 
@@ -141,7 +141,7 @@ This is how it is used in our algorithm. It represents the detrend application o
 
 Next, we did find peaks of the pulse init calculation in order to analyse it. Here's a result of it:
 
-![image](https://camo.githubusercontent.com/e046ea91d7a774f530adc920aa420f9c008fb0db6d14dbe5d4197b134c04f292/68747470733a2f2f6c68332e676f6f676c6575736572636f6e74656e742e636f6d2f6b6565702d6262736b2f415036427654536b4a686e365f66435443446b577a483348504b45616a634b50664d396e6b4b43476a4e4435594730476f74446f374447586638474167436e446736666961426a53494156547961444b515456466a7532716e46706749452d3970494a7a5350753539464a467546504c6b61673d73353939)
+![image](https://cdn.discordapp.com/attachments/609269720805408788/1012052105399369829/Screenshot_9.png)
 
 Every stars which are shown in red represents a peak. Our goal will be to analyse it further.
 
