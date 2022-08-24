@@ -12,11 +12,11 @@ Here is one picture of the video of pulse wave analysis to the program. The prog
 
 Let's move on the step of Pulse Init calculations. The application which has been made allows us to see the pulse init graphic, which in order words allow us to easily see every pulses and then allow us to calculate them. Here's an example: 
 
-![image](https://lh3.googleusercontent.com/keep-bbsk/AP6BvTQ9bYiDuDB1xvsEIt0O1souDrjWkhe8Vw-TohJ5hepwaIr1UP6hJKyayHlpjUKbnjoj9AxovT4JemNYACM6-hm_VU8VYUtegc_wl8fLMCo0cmu4=s560)
+![image](https://camo.githubusercontent.com/ecd06d76bf06cf14ca699d3bbe1c536cad957330e0365667e6593fa304efc272/68747470733a2f2f6c68332e676f6f676c6575736572636f6e74656e742e636f6d2f6b6565702d6262736b2f41503642765451396259694475444231787673454974304f31736f7544726a576b68653856772d546f684a356865707761497231555036684a4b796179486c706a554b626e6a6f6a3941786f7654344a656d4e5941434d362d686d5f565538565955746567635f776c38664c4d436f30636d75343d73353630)
 
 This is a sum of signal pulse of the video implemented to the pulse wave program. The first time the pulse increases is a start of a first cycle. Let's see a detailed explanation of the pulse wave system:
 
-![Image](https://lh3.googleusercontent.com/keep-bbsk/AP6BvTS65aq3sev_qxAHMvxPbNxz5_UXdSomdTI33i6pE1CfbKOF_Ta-IMcBz0PMjtAL_vZCY30OLUrEmvXmYmSMKJb3YnEysoAgMfBdAEdGsQhe0R29=s1600)
+![Image](https://camo.githubusercontent.com/7dafdb5d245c6df9c26e085f7799fe129e51a3354b0c46e311a3222c42d584d3/68747470733a2f2f6c68332e676f6f676c6575736572636f6e74656e742e636f6d2f6b6565702d6262736b2f4150364276545336356171337365765f717841484d767850624e787a355f555864536f6d645449333369367045314366624b4f465f54612d494d63427a30504d6a74414c5f765a435933304f4c5572456d76586d596d534d4b4a6233596e4579736f41674d6642644145644773516865305232393d7331363030)
 
 A systole is when the signal increases, which can be seen each time the pulse goes higher. Meanwhile a diastole is when the signal decreases, which can be seen each time the pulse goes lower.
 
@@ -70,7 +70,7 @@ It is a system that correlate all pixels current pulse with the initial pulse.
 
 Artery Mask allows us to find the arteries & veins for the given video implemented in the pulse wave program.
 
-![image](https://lh3.googleusercontent.com/keep-bbsk/AP6BvTTCBiqRMwCU0O2jmFwHa0kbJHw7q3Khfu-q-CMKh3mboPnJ0Rasm26LzSUnhBo2mrc7ZgAEN7vmbu36WibVv7HvVh9_sdXj5n11wA1cxZM6XmCg=s560)
+![image](https://camo.githubusercontent.com/fa9c9a092f56a22275031bc007627ac019f926b0dccc9cacf67f5be9ac2a5b28/68747470733a2f2f6c68332e676f6f676c6575736572636f6e74656e742e636f6d2f6b6565702d6262736b2f4150364276545443426971524d774355304f326a6d46774861306b624a48773771334b6866752d712d434d4b68336d626f506e4a305261736d32364c7a53556e68426f326d7263375a6741454e37766d6275333657696256763748765668395f7364586a356e313177413163785a4d36586d43673d73353630)
 
 An artery Mask is the result of the correlation between pulse init & each pixel. The yellow part is represented by a binary number with the following explanation: when the binary number equals 1, it shows an artery.
 
@@ -141,7 +141,7 @@ This is how it is used in our algorithm. It represents the detrend application o
 
 Next, we did find peaks of the pulse init calculation in order to analyse it. Here's a result of it:
 
-![image](https://lh3.googleusercontent.com/keep-bbsk/AP6BvTSkJhn6_fCTCDkWzH3HPKEajcKPfM9nkKCGjND5YG0GotDo7DGXf8GAgCnDg6fiaBjSIAVTyaDKQTVFju2qnFpgIE-9pIJzSPu59FJFuFPLkag=s599)
+![image](https://camo.githubusercontent.com/e046ea91d7a774f530adc920aa420f9c008fb0db6d14dbe5d4197b134c04f292/68747470733a2f2f6c68332e676f6f676c6575736572636f6e74656e742e636f6d2f6b6565702d6262736b2f415036427654536b4a686e365f66435443446b577a483348504b45616a634b50664d396e6b4b43476a4e4435594730476f74446f374447586638474167436e446736666961426a53494156547961444b515456466a7532716e46706749452d3970494a7a5350753539464a467546504c6b61673d73353939)
 
 Every stars which are shown in red represents a peak. Our goal will be to analyse it further.
 
