@@ -70,7 +70,7 @@ It is a system that correlate all pixels current pulse with the initial pulse.
 
 Artery Mask allows us to find the arteries & veins for the given video implemented in the pulse wave program.
 
-![image](https://camo.githubusercontent.com/fa9c9a092f56a22275031bc007627ac019f926b0dccc9cacf67f5be9ac2a5b28/68747470733a2f2f6c68332e676f6f676c6575736572636f6e74656e742e636f6d2f6b6565702d6262736b2f4150364276545443426971524d774355304f326a6d46774861306b624a48773771334b6866752d712d434d4b68336d626f506e4a305261736d32364c7a53556e68426f326d7263375a6741454e37766d6275333657696256763748765668395f7364586a356e313177413163785a4d36586d43673d73353630)
+![image](https://cdn.discordapp.com/attachments/609269720805408788/1012050727339835412/unknown.png)
 
 An artery Mask is the result of the correlation between pulse init & each pixel. The yellow part is represented by a binary number with the following explanation: when the binary number equals 1, it shows an artery.
 
