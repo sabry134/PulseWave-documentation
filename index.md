@@ -12,11 +12,11 @@ Here is one picture of the video of pulse wave analysis to the program. The prog
 
 Let's move on the step of Pulse Init calculations. The application which has been made allows us to see the pulse init graphic, which in order words allow us to easily see every pulses and then allow us to calculate them. Here's an example: 
 
-![image](https://cdn.discordapp.com/attachments/609269720805408788/1012051767850172436/Screenshot_7.png)
+![image](https://cdn.discordapp.com/attachments/609269720805408788/1012054116425547776/Screenshot_7.png)
 
 This is a sum of signal pulse of the video implemented to the pulse wave program. The first time the pulse increases is a start of a first cycle. Let's see a detailed explanation of the pulse wave system:
 
-![Image](https://cdn.discordapp.com/attachments/609269720805408788/1012051901463932958/Screenshot_8.png)
+![Image](https://cdn.discordapp.com/attachments/609269720805408788/1012054231202668584/unknown.png)
 
 A systole is when the signal increases, which can be seen each time the pulse goes higher. Meanwhile a diastole is when the signal decreases, which can be seen each time the pulse goes lower.
 
