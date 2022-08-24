@@ -57,13 +57,90 @@ We'll focus on this particular part of code:
 This part shows an initial pulse : this is the first assessment of averaged pulse wave.
 
 If we watch another part of code, we'll find this:
-```    C = C .* pulse_init_3d;
+```
+    C = C .* pulse_init_3d;
 ```
 It is a system that correlate all pixels current pulse with the initial pulse.
 
+#### What is an Artery Mask?
+
+Artery Mask allows us to find the arteries & veins for the given video implemented in the pulse wave program.
+
+![image](https://lh3.googleusercontent.com/keep-bbsk/AP6BvTTCBiqRMwCU0O2jmFwHa0kbJHw7q3Khfu-q-CMKh3mboPnJ0Rasm26LzSUnhBo2mrc7ZgAEN7vmbu36WibVv7HvVh9_sdXj5n11wA1cxZM6XmCg=s560)
+
+An artery Mask is the result of the correlation between pulse init & each pixel. The yellow part is represented by a binary number with the following explanation: when the binary number equals 1, it shows an artery.
 
 
 ### Analysis of Complete cycles
+
+We now have a comparison between a pulse init and initial pulse 0:
+
+![image](https://lh3.googleusercontent.com/keep-bbsk/AP6BvTSQuN8vmtttcQ1tQASAk8R_npm5h3-zsLMvaY8BpmSAXwceBSmZhDlJtbp-ZQATg4Qm6JsI3vEGGRHc5Zj9C66zzozC2q1DqKs2OMrpruNBIob_=s1600)
+
+The red part is representing the pulse init, meanwhile the blue part is the pulse init 0 (Initial pulse : first assessment of averaged pulse wave).
+
+We will now focus on a function called "Detrend". Here's a visual representation about it:
+
+![image](https://lh3.googleusercontent.com/keep-bbsk/AP6BvTSY_npUB95tYyW9dvoNeo7KZVNVC2Mm6S3K-chs6Ohq3MGzmjuTuGgcHLLhBqrsHSVkK33ADqEAd1hk4pft66dgSZblcWM5vf8QBnxByeIuMJFg=s547)
+
+The linear function is represented by a binary number with the following explanation: when the binary number equals 1, it shows an artery.
+
+Moving on further, another application has been developed in which the goal is to remove incomplete cycles, in order to make the cycle analysis easier. Here's a picture explaining the goal: 
+
+![image](https://lh3.googleusercontent.com/keep-bbsk/AP6BvTS3mtQuEBQPu7RP521jVzQWrt0dDao0p4qZaXIDNcbilRSFjhvp62yIPEd7uz2CobTVF4jlrVRKr-tdw4B3JlTPIzQeef7NmIOtO0DJzcL68NOc=s1291)
+
+The goal is to delete incomplete cycles.
+
+To do so, we used an algorithm of an application to analyse the cycles, let's watch it: 
+
+```
+filepath = uigetfile("*");
+V = VideoReader(filepath);
+video = zeros(V.Height, V.Width, V.NumFrames);        
+for n = 1 : V.NumFrames
+    video(:,:,n) = rgb2gray(read(V, n));
+end
+for pp = 1:size(video, 3)
+    video(:,:,pp) = video(:,:,pp) ./ mean(video(:,:,pp), [1 2]);
+end
+mask = std(video, 0, 3);
+mask = imbinarize(im2gray(mask), 'adaptive', 'ForegroundPolarity', 'bright', 'Sensitivity', 0.2);
+pulse = squeeze(mean(video .* mask, [1 2]));
+pulse_init = pulse - mean(pulse, "all");
+y = pulse_init;
+y = y/max(pulse_init);
+y = detrend(y);
+m = islocalmin(y);
+jj = 1;
+for ii = 1:size(m)
+    if m(ii) && y(ii) < 0
+        index(jj) = ii;
+        jj = jj + 1;
+    end
+end
+plot(app.UIAxes, y(index(1):index(size(index, 2))));
+```
+
+If we get on it further, we'll see the pulse init calculation init, represented by the following code:
+
+```
+y = y/max(pulse_init);
+```
+
+Then after doing this calculation, we'll use the detrend function for this:
+
+```
+y = detrend(y);
+```
+This is how it is used in our algorithm. It represents the detrend application of a pulse init.
+
+Next, we did find peaks of the pulse init calculation in order to analyse it. Here's a result of it:
+
+![image](https://lh3.googleusercontent.com/keep-bbsk/AP6BvTRyXtEl9Qy6R2F1xnAawHJ8X5THbu5YHPzjO9L-2-4zRLMAaV193peMdBmSJc4b2nrQZPCQa-YSslzHjI4VobmysPnlwZe_-N1rRcxJvdY5wnE=s599)
+
+Every stars which are shown in red represents a peak. Our goal will be to analyse it further.
+
+
 
 
 ## OneCycle Application
