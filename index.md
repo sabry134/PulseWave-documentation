@@ -26,7 +26,8 @@ We'll now move on the another part which is the Artery Mask.
 
 We'll start with a technical part in which the artery mask algorithm is shown:
 
-```function artery_mask = createArteryMask(video)
+```
+function artery_mask = createArteryMask(video)
     mask = std(video, 0, 3);
     mask = imbinarize(im2gray(mask), 'adaptive', 'ForegroundPolarity', 'bright', 'Sensitivity', 0.2);
     pulse = squeeze(mean(video .* mask, [1 2]));
@@ -135,6 +136,7 @@ Then after doing this calculation, we'll use the detrend function for this:
 ```
 y = detrend(y);
 ```
+
 This is how it is used in our algorithm. It represents the detrend application of a pulse init.
 
 Next, we did find peaks of the pulse init calculation in order to analyse it. Here's a result of it:
