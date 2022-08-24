@@ -75,19 +75,19 @@ An artery Mask is the result of the correlation between pulse init & each pixel.
 
 We now have a comparison between a pulse init and initial pulse 0:
 
-![image](https://lh3.googleusercontent.com/keep-bbsk/AP6BvTSQuN8vmtttcQ1tQASAk8R_npm5h3-zsLMvaY8BpmSAXwceBSmZhDlJtbp-ZQATg4Qm6JsI3vEGGRHc5Zj9C66zzozC2q1DqKs2OMrpruNBIob_=s1600)
+![image](https://cdn.discordapp.com/attachments/609269720805408788/1012047785165590618/unnamed_4.png)
 
 The red part is representing the pulse init, meanwhile the blue part is the pulse init 0 (Initial pulse : first assessment of averaged pulse wave).
 
 We will now focus on a function called "Detrend". Here's a visual representation about it:
 
-![image](https://lh3.googleusercontent.com/keep-bbsk/AP6BvTSY_npUB95tYyW9dvoNeo7KZVNVC2Mm6S3K-chs6Ohq3MGzmjuTuGgcHLLhBqrsHSVkK33ADqEAd1hk4pft66dgSZblcWM5vf8QBnxByeIuMJFg=s547)
+![image](https://cdn.discordapp.com/attachments/609269720805408788/1012047913674887299/unnamed_5.png)
 
 The linear function is represented by a binary number with the following explanation: when the binary number equals 1, it shows an artery.
 
 Moving on further, another application has been developed in which the goal is to remove incomplete cycles, in order to make the cycle analysis easier. Here's a picture explaining the goal: 
 
-![image](https://lh3.googleusercontent.com/keep-bbsk/AP6BvTS3mtQuEBQPu7RP521jVzQWrt0dDao0p4qZaXIDNcbilRSFjhvp62yIPEd7uz2CobTVF4jlrVRKr-tdw4B3JlTPIzQeef7NmIOtO0DJzcL68NOc=s1291)
+![image](https://cdn.discordapp.com/attachments/609269720805408788/1012048042008002701/unnamed.jpg)
 
 The goal is to delete incomplete cycles.
 
@@ -136,7 +136,7 @@ This is how it is used in our algorithm. It represents the detrend application o
 
 Next, we did find peaks of the pulse init calculation in order to analyse it. Here's a result of it:
 
-![image](https://lh3.googleusercontent.com/keep-bbsk/AP6BvTRyXtEl9Qy6R2F1xnAawHJ8X5THbu5YHPzjO9L-2-4zRLMAaV193peMdBmSJc4b2nrQZPCQa-YSslzHjI4VobmysPnlwZe_-N1rRcxJvdY5wnE=s599)
+![image](https://lh3.googleusercontent.com/keep-bbsk/AP6BvTSkJhn6_fCTCDkWzH3HPKEajcKPfM9nkKCGjND5YG0GotDo7DGXf8GAgCnDg6fiaBjSIAVTyaDKQTVFju2qnFpgIE-9pIJzSPu59FJFuFPLkag=s599)
 
 Every stars which are shown in red represents a peak. Our goal will be to analyse it further.
 
