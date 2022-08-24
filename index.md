@@ -51,12 +51,15 @@ end
 ```
 
 We'll focus on this particular part of code:
+
 ```
     pulse_init = pulse - mean(pulse, "all");
 ```
+
 This part shows an initial pulse : this is the first assessment of averaged pulse wave.
 
 If we watch another part of code, we'll find this:
+
 ```
     C = C .* pulse_init_3d;
 ```
